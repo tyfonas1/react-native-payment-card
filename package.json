@@ -1,0 +1,32 @@
+{
+  "name": "react-native-payment-card",
+  "version": "1.0.6",
+  "description": "React native credit/debit card UI",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Gulamwaris Warsi",
+  "license": "ISC",
+  "dependencies": {
+    "card-validator": "^6.2.0",
+    "credit-card-type": "^8.3.0",
+    "lodash": "^4.17.15",
+    "lodash.compact": "^3.0.1",
+    "lodash.every": "^4.6.0",
+    "lodash.pick": "^4.4.0",
+    "lodash.values": "^4.3.0",
+    "prop-types": "^15.7.2",
+    "react-native-credit-card": "^0.1.9",
+    "react-native-flip-card": "^3.5.5"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gulamwaris/react-native-payment-card.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Gulamwaris/react-native-payment-card/issues"
+  },
+  "homepage": "https://github.com/Gulamwaris/react-native-payment-card#readme"
+}
