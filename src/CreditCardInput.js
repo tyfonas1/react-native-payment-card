@@ -29,9 +29,9 @@ const s = StyleSheet.create({
    flexDirection:'row',
    justifyContent:'space-between',
    margin:10,
-   
-   
-  
+
+
+
 
   },
 
@@ -41,19 +41,19 @@ const s = StyleSheet.create({
     flex:1,
     padding:10,
     color:"black",
-    
+
     borderRadius: 4,
     fontFamily: "Montserrat-Regular",
     display:"flex",
     alignItems:"center",
     justifyContent:"center",
-    
+
 
   },
-    
 
-    
-  
+
+
+
   tabStyleClicked:{
     borderColor:"#058584",
     borderWidth:1,
@@ -72,9 +72,9 @@ const s = StyleSheet.create({
     // shadowOpacity: 0.29,
     // shadowRadius: 4,
     // elevation: 4
-  
 
-   
+
+
   },
 
   text:{
@@ -89,7 +89,7 @@ const s = StyleSheet.create({
     fontSize:12,
     // fontWeight:"bold"
   },
-  
+
   container: {
     marginLeft:40,
     marginRight:40,
@@ -102,7 +102,7 @@ const s = StyleSheet.create({
   },
   inputContainer: {
     // marginLeft: 50
-    
+
   },
   inputLabel: {
     // marginTop:25,
@@ -118,7 +118,7 @@ const s = StyleSheet.create({
    display:'flex',
    flexDirection:'row',
    justifyContent:'space-between',
-  //  marginBottom:5 
+  //  marginBottom:5
   }
 });
 
@@ -239,7 +239,7 @@ export default class CreditCardInput extends Component {
     return (
       <View style={s.container}>
         <View style={s.conntainer}>
-        <CreditCard 
+        <CreditCard
         cardtype={this.props.values.cardtype}
         focused={focused}
           brand={type}
@@ -253,66 +253,22 @@ export default class CreditCardInput extends Component {
           expiry={expiry}
           cvc={cvc} />
           </View>
-        <ScrollView ref="Form" 
+        <ScrollView ref="Form"
           keyboardShouldPersistTaps="always"
           scrollEnabled={allowScroll}
           showsHorizontalScrollIndicator={false}
           style={s.form}>
 
 
-            <View style={s.tabContainer}>
-            {this.state.isDebitButtonChecked?
-            <TouchableOpacity
-             onPress={()=>{this.setState({
-              isDebitButtonChecked:true,
-              isCreditButtonChecked:false
-            }) }}
-            style={s.tabStyleClicked}>
-              <Text style={s.textClicked}>Debit Card</Text></TouchableOpacity>:
-              <TouchableOpacity 
-              onPress={()=>{this.setState({
-                isDebitButtonChecked:true,
-                isCreditButtonChecked:false
-              })}}
-              style={s.tabStyle}>
-              <Text style={s.text}>Debit Card</Text></TouchableOpacity>}
 
-              {this.state.isCreditButtonChecked?
-            <TouchableOpacity
-             onPress={()=>{this.setState({
-              isCreditButtonChecked:true,
-              isDebitButtonChecked:false
-            }) }}
-            style={s.tabStyleClicked}>
-              <Text style={s.textClicked}>Credit Card</Text></TouchableOpacity>:
-              <TouchableOpacity 
-              onPress={()=>{this.setState({
-                isDebitButtonChecked:false,
-                isCreditButtonChecked:true
-              })}}
-              style={s.tabStyle}>
-              <Text style={s.text}>Credit Card</Text></TouchableOpacity>}
-              
-              
-             
-
-
-              {/* <TouchableOpacity style={s.tabStyle} onPress={()=>this.setState({
-              isDebitButtonChecked:false,
-              isCreditButtonChecked:true
-            })}>
-              {this.state.isCreditButtonChecked?<Text style={{backgroundColor:"#058584",color:"white"}}>Credit Card</Text>:<Text>Credit Card</Text>}
-              
-              </TouchableOpacity> */}
-              </View>
               { requiresName &&
             <CCInput {...this._inputProps("name")}
               containerStyle={[s.inputContainer, inputContainerStyle, { width: NAME_INPUT_WIDTH }]} /> }
           <CCInput {...this._inputProps("number")}
             keyboardType="numeric"
             containerStyle={[s.inputContainer, inputContainerStyle, { width: CARD_NUMBER_INPUT_WIDTH }]} />
-            
-         
+
+
               <View style={s.expCvv}>
           <CCInput {...this._inputProps("expiry")}
             keyboardType="numeric"
